@@ -1,0 +1,22 @@
+programa
+{
+ 
+     inclua biblioteca Util --> u 
+	
+inteiro megaSena[6]
+	
+	funcao inicio()
+	{
+		sorteio()
+	}
+
+	funcao sorteio(){
+		para(inteiro i = 0; i<6; i++){
+			megaSena[i] = u.sorteia(0, 60)
+		}
+		escreva(".")
+		para(inteiro i = 0; i<6; i++){
+			escreva(megaSena[i]+".")
+		}
+	}
+}
