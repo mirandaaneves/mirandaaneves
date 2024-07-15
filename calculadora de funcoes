@@ -1,0 +1,83 @@
+programa
+{
+    inteiro opcao = 0
+    inteiro resultado, numero1, numero2
+
+    funcao somar(){
+        escreva("Digite o primeiro número: ")
+        leia(numero1)
+
+        escreva("Digite o segundo número: ")
+        leia(numero2)
+
+        resultado = numero1 + numero2
+    }
+
+    funcao subtrair(){
+        escreva("Digite o primeiro número: ")
+        leia(numero1)
+
+        escreva("Digite o segundo número: ")
+        leia(numero2)
+
+        resultado = numero1 - numero2
+    }
+
+    funcao multiplicar(){
+        escreva("Digite o primeiro número: ")
+        leia(numero1)
+
+        escreva("Digite o segundo número: ")
+        leia(numero2)
+
+        resultado = numero1 * numero2
+    }
+
+    funcao dividir(){
+        escreva("Digite o primeiro número: ")
+        leia(numero1)
+
+        escreva("Digite o segundo número: ")
+        leia(numero2)
+
+        resultado = numero1 / numero2
+    }
+
+    funcao menu(){
+      escreva("\n")
+      escreva("Escolha a operação desejada:\n")
+        escreva("1 - Somar\n")
+        escreva("2 - Subtrair\n")
+        escreva("3 - Multiplicar\n")
+        escreva("4 - Dividir\n")
+        escreva("5 - Sair\n ")
+        leia(opcao)
+    }
+
+    funcao inicio(){
+       
+       
+
+menu()
+        enquanto(opcao!=5){
+            se(opcao == 1){
+                somar()
+            }
+            se(opcao == 2){
+                subtrair()
+            }
+            se(opcao == 3){
+                multiplicar()
+            }
+            se(opcao == 4){
+                dividir()
+            }
+            senao{
+                escreva("Opção inválida!")
+        }
+
+        escreva("Resultado: ", resultado)
+        menu()
+    }
+    }
+}
