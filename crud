@@ -1,0 +1,86 @@
+programa
+{
+cadeia  nome[5]
+real    opcao = 1.0
+inteiro posicao = 0,idade[5]
+
+     funcao menu(){
+      escreva("1-Criar Pessoa\n")
+      escreva("2-Ler Pessoa\n")
+      escreva("3-Atualizar Pessoa\n")
+      escreva("4-Remover Pessoa\n")
+      escreva("5-Sair\n")
+      leia(opcao)
+      limpa()
+     }
+     funcao inicio()
+     {
+      menu()
+      enquanto(opcao!=5){
+               se(opcao == 1){
+                criarPessoa()
+               }
+               se(opcao == 2){
+                lerPessoa()
+               }
+               se(opcao == 3){
+                atualizarPessoa()
+               }
+               se(opcao == 4){
+                removerPessoa()
+               }
+      menu()
+      }
+     }
+funcao criarPessoa(){
+se(posicao < 5){
+escreva("Nome: ")
+leia(nome[posicao])
+escreva("idade: ")
+leia(idade[posicao])
+posicao++
+limpa()
+}senao{
+    escreva("Cadastrou tudo\n")
+}
+}
+
+funcao atualizarPessoa(){
+inteiro posicaoBusca
+escreva("Qual ID da pessoa?\n")
+          leia(posicaoBusca)
+
+          escreva("Dados Atuais: \n")
+          escreva("Nome: " + nome[posicaoBusca] + "\n")
+          escreva("idade: " + idade[posicaoBusca] + "\n")
+         
+          escreva("Nome: ")
+          leia(nome[posicaoBusca])
+          escreva("idade: ")
+          leia(idade[posicaoBusca])
+         
+}
+     funcao lerPessoa(){
+      inteiro posicaoBusca
+
+      escreva("Qual o ID da pessoa?\n")
+      leia(posicaoBusca)
+
+      escreva("Nome: " + nome[posicaoBusca] + "\n")
+      escreva("idade: " + idade[posicaoBusca] + "\n")
+     
+     }
+
+     funcao removerPessoa(){
+      inteiro posicaoBusca = 0, remover
+
+      enquanto(posicaoBusca > posicao){
+      escreva("Qual o ID da pessoa?\n")
+      leia(posicaoBusca)
+      }
+
+          nome[posicaoBusca] = ""
+      idade[posicaoBusca] = 0.0
+
+     }
+}
